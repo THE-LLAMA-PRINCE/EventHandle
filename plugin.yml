@@ -1,0 +1,4 @@
+name: EventHandle
+main: eventhandle.plugin.eventhandle.EventHandle
+version: 1.0
+commands:
