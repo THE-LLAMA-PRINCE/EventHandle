@@ -16,7 +16,6 @@ public class PlayerListener implements Listener {
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 		configGetter = plugin;
 	}
-	
 	@EventHandler
 	public void onLavaOrWaterBucketFill(PlayerBucketFillEvent e) {
 		
@@ -27,7 +26,7 @@ public class PlayerListener implements Listener {
 			e.setCancelled(true);
 			player.sendMessage(ChatColor.RED + "You do not have permission to fill buckets, buy them from the store if you need water or lava");
 		}
-			
+		else e.setCancelled(false);
 	}
 	
 	@EventHandler
