@@ -1,0 +1,13 @@
+#***************************************#
+#                                       #
+#        Only Buy Buckets v1.0          #
+#         by:THE_LLAMA_PRINCE           #
+#                                       #
+#***************************************#
+
+# Change to false if you want to disable the plugin
+# If you want certain users to override the plugin use the following permission
+# onlybuybuckets.override
+
+Enable Only Buy Buckets: true
+test start: true
