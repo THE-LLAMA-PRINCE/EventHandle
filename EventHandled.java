@@ -18,12 +18,7 @@ public class EventHandled extends JavaPlugin {
 		this.saveConfig();
 		this.saveDefaultConfig();
 	}
-	
 	@Override
-	public void onDisable() {
-		//Saving config on close
-		this.saveConfig();
-		this.saveDefaultConfig();
-		
+	public void onDisable() {	
 	}
 }
