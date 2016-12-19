@@ -1,0 +1,3 @@
+name: OnlyBuyBuckets
+main: minecraft.llama.minecraft.EventHandled
+version: 1.0
