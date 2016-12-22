@@ -46,9 +46,9 @@ public class MainClass extends JavaPlugin {
 		this.saveConfig();
 		this.saveDefaultConfig();
 		//GETTING COMMANDS FROM OTHER CLASSES
-		getCommand("swjoinmsg").setExecutor(new JoinMessgaeCommand());
-		getCommand("swjoinbc").setExecutor(new JoinBroadcastCommand());
-		getCommand("swleavebc").setExecutor(new LeaveBroadcastCommand());
+		getCommand("swjoinmsg").setExecutor(new JoinMessgaeCommand(this));
+		getCommand("swjoinbc").setExecutor(new JoinBroadcastCommand(this));
+		getCommand("swleavebc").setExecutor(new LeaveBroadcastCommand(this));
 	}
 	@Override
 	public void onDisable() {

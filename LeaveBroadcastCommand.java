@@ -10,6 +10,10 @@ import net.md_5.bungee.api.ChatColor;
 public class LeaveBroadcastCommand implements CommandExecutor {
 	
 	MainClass configGetter;
+        public LeaveBroadcastCommand(MainClass plugin) {
+                plugin.getServer().getPluginManager().registerEvents(this, plugin);
+                configGetter = plugin;
+        }
 
 	@Override
 	//Command LeaveBc

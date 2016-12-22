@@ -10,6 +10,10 @@ import net.md_5.bungee.api.ChatColor;
 public class JoinBroadcastCommand implements CommandExecutor {
 	
 	MainClass configGetter;
+        public JoinBroadcastCommand(MainClass plugin) {
+                plugin.getServer().getPluginManager().registerEvents(this, plugin);
+                configGetter = plugin;
+        }
 
 	@Override
 	//Command WelcomeBc

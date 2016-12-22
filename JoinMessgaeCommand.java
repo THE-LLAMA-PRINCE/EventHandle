@@ -9,6 +9,10 @@ import net.md_5.bungee.api.ChatColor;
 public class JoinMessgaeCommand implements CommandExecutor {
 	
 	MainClass configGetter;
+        public JoinMessgaeCommand(MainClass plugin) {
+                plugin.getServer().getPluginManager().registerEvents(this, plugin);
+                configGetter = plugin;
+        }
 
 	@Override
 	//Command WelcomeMsg
