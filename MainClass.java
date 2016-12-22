@@ -4,7 +4,7 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import welcome.llama.welcome.JoinBroadcastCommand;
-import welcome.llama.welcome.JoinMessgaeCommand;
+import welcome.llama.welcome.JoinMessageCommand;
 import welcome.llama.welcome.LeaveBroadcastCommand;
 import welcome.llama.welcome.JoinListener;
 
@@ -23,6 +23,9 @@ public class MainClass extends JavaPlugin {
 	public void onEnable() {
 		//MAKES THE NEW LISTENER
 		new JoinListener(this);
+		new JoinMessageCommand(this);
+		new JoinBroadcastCommand(this);
+		new LeaveBroadcastCommand(this);
 		//ADDS PERMISSIONS
 		PluginManager pm = getServer().getPluginManager();
 		pm.addPermission(joinmsgoverride);
@@ -46,7 +49,7 @@ public class MainClass extends JavaPlugin {
 		this.saveConfig();
 		this.saveDefaultConfig();
 		//GETTING COMMANDS FROM OTHER CLASSES
-		getCommand("swjoinmsg").setExecutor(new JoinMessgaeCommand(this));
+		getCommand("swjoinmsg").setExecutor(new JoinMessageCommand(this));
 		getCommand("swjoinbc").setExecutor(new JoinBroadcastCommand(this));
 		getCommand("swleavebc").setExecutor(new LeaveBroadcastCommand(this));
 	}
